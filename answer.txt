@@ -1,4 +1,4 @@
-1. What is the Git command to set up email and name?
+What is the Git command to set up email and name?
 ***For All projects:
 - for email: git config --global user.email "sun.libra95@gmail.com"
 - for name: git config --global user.name "Sun"
