@@ -1,0 +1,13 @@
+1. Explanation
+- git init: Start a new Git repository in the current folder. From this time, any changes in project will be tracked by Git
+- git add <file_name>: Add a specific changed file to Staging Area
+- git add . : Add all changed files to Staging Area
+- git commit -m "message": Save the changes and add a message to describe what changes
+
+2.
+a. All 3 files are not tracked by Git yet because at this time, Git has been initialized
+b. After running the command git init, 3 files are in Working Directory area
+c. After running the command git commit -m "init project", the system may return a message like nothing to commit because there are no files are added in Staging Area
+d. After running the command git add file1, only file1 was in the Staging Area
+e. After running the command git commit -m "add file 1", the system will save the commit by the file1 in Staging Area with the message "add file 1"
+f. After running the command git commit -m "add file", similar to "case C". the system may return a message like nothing to commit because there are no files are added in Staging Area
