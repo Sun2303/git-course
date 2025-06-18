@@ -1,0 +1,57 @@
+1.
+- git commit --amend: update the message of latest commit using Vim editor
+
+- git commit --amend -m <message>: A shortcut way update the latest commit message directly without using Vim editor
+
+- git restore --staged <file>: remove a file's snapshot from the Staging Area
+
+- git reset HEAD~1: reset the project back to previous commit. The number after ~ indicates how many commits to go back from the current commit
+
+=========================================================
+
+2. New folder lesson-3
+a. Create new file1, file2, file3
+=> All 3 files are not tracked by Git yet
+
+b. git init
+=> The local repository is initialized. All 3 files are in Working Directory
+
+c. git commit -m"init project"
+=> The Nothing happen
+
+d. git add file1
+=> The file1's snapshot is added in the Staging Area
+
+e. git commit -m "add file"
+=> A new commit is created with message "add file" and contains file1
+
+f. git add .
+=> The snapshot of file2, file3 are added in the Staging Area
+
+g. git resotre --staged file2
+=> The snapshot of file2 is removed from the Staging Area. Only snapshot of file3 is in the Staging Area
+
+h. git commit -m "add all files"
+=> A new commit is created with message "add all files" and contains file3
+
+i. git reset HEAD~1
+=> The project back to the "add file" commit. file3 is only in Working Directory without any snapshot in the Staging Area
+
+=========================================================
+
+3. New folder lesson-3-git
+a. git init 
+=> The local repository is initialized
+
+b. Create new file1.txt, file2.txt, oops/file3.txt
+=> file1.txt, file2.txt, file3.txt are in Working Directory
+
+c. Add file .gitignore then input 2 lines: file1.txt, oops/
+=> file1.txt and file3.txt are ignored (the files are in being grey)
+
+d. git add .
+=> Only file2.txt's snapshot is added in the Staging Area
+
+e. git commit -m"init project"
+=> A new commit is created with message "init project" and contains file2.txt's snapshot
+
